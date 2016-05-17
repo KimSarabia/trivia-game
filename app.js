@@ -27,14 +27,6 @@ var messageLog = [];
 var userCount = 0;
 var currentGame = null;
 
-// function Player(socket) {
-//
-// }
-//
-// Player.prototype.method = function () {
-//
-// };
-
 var players = [];
 
 class Game extends EventEmitter {
@@ -157,11 +149,6 @@ io.on('connection', function(socket) {
         currentGame.start();
     }
 
-    //take the input
-    //determine the winner
-    //am I answer 3
-    //did you win?
-    //if you have answer 1, you won...
     socket.on("error", err => {
         console.error(err);
     });
